@@ -14,3 +14,13 @@ class Initialise_path():
 
     def _get_image(self):
         return self.image
+
+    def _get_instance(self):
+        return Initialise_path()
+    
+# =============================================================================>
+
+class Face_cascade():
+
+    def __init__(self):
+        self.initialise = Initialise_path._get_instance()
