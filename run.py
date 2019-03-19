@@ -26,3 +26,9 @@ class Face_cascade():
         self.initialise   = Initialise_path()
         self.face_cascade = None
         self.eye_cascade  = None
+
+    def _get_face_cascade(self):
+        if(self.face_cascade == None): return self.face_cascade
+
+    def _get_eye_cascade(self):
+        if(self.eye_cascade == None): return self.eye_cascade
