@@ -1,5 +1,5 @@
 
-class Initialise_path():
+class Initialise_path:
 
     def __init__(self):
         self.face  = "haarcascades/haarcascade_frontalface_default.xml"
@@ -20,10 +20,10 @@ class Initialise_path():
     
 # =============================================================================>
 
-class Face_cascade():
+class Face_cascade:
 
     def __init__(self):
-        self.initialise   = Initialise_path()
+        self.initialise   = Initialise_path._get_instance()
         self.face_cascade = None
         self.eye_cascade  = None
 
@@ -38,3 +38,7 @@ class Face_cascade():
         
     def _set_eye_cascade(self, eye_cascade):
         if(self.eye_cascade == None): self.eye_cascade = eye_cascade
+
+# ==============================================================================>
+
+class Image_Treat:
