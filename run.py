@@ -28,7 +28,13 @@ class Face_cascade():
         self.eye_cascade  = None
 
     def _get_face_cascade(self):
-        if(self.face_cascade == None): return self.face_cascade
+        return self.face_cascade
 
     def _get_eye_cascade(self):
-        if(self.eye_cascade == None): return self.eye_cascade
+        return self.eye_cascade
+    
+    def _set_face_cascade(self, face_cascade): 
+        if(self.face_cascade == None) : self.face_cascade = face_cascade
+        
+    def _set_eye_cascade(self, eye_cascade):
+        if(self.eye_cascade == None): self.eye_cascade = eye_cascade
