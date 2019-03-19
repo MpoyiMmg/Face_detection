@@ -42,3 +42,6 @@ class Face_cascade:
 # ==============================================================================>
 
 class Image_Treat:
+
+    def __init__(self):
+        self.image = None
