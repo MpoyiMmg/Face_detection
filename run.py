@@ -5,3 +5,6 @@ class Initialise_path():
         self.face  = "haarcascades/haarcascade_frontalface_default.xml"
         self.eye   = "haarcascades/haarcascade_eye.xml"
         self.image = "/home/gaelmmg/Pictures/IMG-20190220-WA0018.jpg"
+
+    def _get_face(self):
+        return self.face
