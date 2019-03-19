@@ -8,3 +8,9 @@ class Initialise_path():
 
     def _get_face(self):
         return self.face
+
+    def _get_eye(self):
+        return self.eye
+
+    def _get_image(self):
+        return self.image
