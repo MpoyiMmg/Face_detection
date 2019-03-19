@@ -23,4 +23,6 @@ class Initialise_path():
 class Face_cascade():
 
     def __init__(self):
-        self.initialise = Initialise_path._get_instance()
+        self.initialise   = Initialise_path()
+        self.face_cascade = None
+        self.eye_cascade  = None
