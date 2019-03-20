@@ -53,3 +53,6 @@ class Image_Treat:
 
     def _get_image(self):
         return self.image_load
+    
+    def _get_gray(self):
+        return self.gray
