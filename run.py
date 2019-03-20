@@ -92,3 +92,6 @@ class Face_Recognition:
                 opencv.rectangle(roi_eye, (ex,ey), (ex+ew, ey+eh),(255,255,0),2)
         return self.image
 
+    
+    def display(self):
+
