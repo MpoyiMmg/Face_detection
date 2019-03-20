@@ -84,5 +84,11 @@ class Face_Recognition:
         faces = self.face()
 
         for(x,y,w,h) in faces:
-             self.image = opencv.rectangle(self.image, (x,y), (x+w, y+h),(255,0,0), 2)
+            self.image = opencv.rectangle(self.image, (x,y), (x+w, y+h),(255,0,0), 2)
+            roi_gray = self.gray[y:y+h, x:x+h]
+            roi_eye = self.image[y:y+h, x:x+h]
+            eyes = self.eye_cascade.detectMultiScale(roi_gray)
+            for (ex,ey,eh,ew) in eyes:
+                opencv.rectangle(roi_eye, (ex,ey), (ex+ew, ey+eh),(255,255,0),2)
+        return self.image
 
