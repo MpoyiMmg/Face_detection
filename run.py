@@ -78,4 +78,8 @@ class Face_Recognition:
 
         faces             = self.face_cascade.detectMultiScale(self.gray)
 
+        return faces
+
+    def recognition(self):
+
 
