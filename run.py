@@ -49,3 +49,4 @@ class Image_Treat:
         self.initialise = Initialise_path()
         self.image      = self.initialise._get_image()
         self.image_load = opencv.imread(self.image)
+        self.gray       = opencv.cvtColor(self.image_load, opencv.COLOR_BGR2GRAY)
