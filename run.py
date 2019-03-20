@@ -94,4 +94,7 @@ class Face_Recognition:
 
     
     def display(self):
-
+        img = self.recognition() 
+        opencv.imshow("image",img)
+        opencv.waitKey(0)
+        opencv.destroyWindow("test")
