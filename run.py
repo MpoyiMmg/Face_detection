@@ -64,3 +64,5 @@ class Face_Recognition:
     def __init__(self):
         self.face_instance  = Face_cascade()
         self.image_instance = Image_Treat()
+
+    def face():
