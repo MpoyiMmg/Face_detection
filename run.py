@@ -81,5 +81,8 @@ class Face_Recognition:
         return faces
 
     def recognition(self):
+        faces = self.face()
 
+        for(x,y,w,h) in faces:
+             self.image = opencv.rectangle(self.image, (x,y), (x+w, y+h),(255,0,0), 2)
 
