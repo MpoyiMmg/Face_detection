@@ -71,4 +71,6 @@ class Face_Recognition:
 
     def face(self):
         self.face_cascade = opencv.CascadeClassifier(self.face_instance._get_face_cascade())
+        self.eye_cascade  = opencv.CascadeClassifier(self.face_instance._get_eye_cascade())
+
 
