@@ -56,3 +56,8 @@ class Image_Treat:
     
     def _get_gray(self):
         return self.gray
+
+# ==============================================================================>
+
+class Face_Recognition:
+    
