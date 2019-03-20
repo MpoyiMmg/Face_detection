@@ -46,3 +46,4 @@ class Image_Treat:
     def __init__(self):
         self.initialise = Initialise_path()
         self.image      = self.initialise._get_image()
+        self.image_load = opencv.imread(self.image)
