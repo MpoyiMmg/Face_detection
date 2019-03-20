@@ -104,3 +104,6 @@ class Face_Recognition:
 # ===============================================================================>
 
 class Main:
+    def main(self):
+        instance = Face_Recognition()
+        instance.display()
