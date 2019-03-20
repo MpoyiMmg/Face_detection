@@ -1,4 +1,6 @@
 
+import cv2 as opencv
+
 class Initialise_path:
 
     def __init__(self):
