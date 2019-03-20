@@ -76,4 +76,6 @@ class Face_Recognition:
         self.image        = self.image_instance._get_image()
         self.gray         = self.image_instance._get_gray()
 
+        faces             = self.face_cascade.detectMultiScale(self.gray)
+
 
