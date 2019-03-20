@@ -70,5 +70,5 @@ class Face_Recognition:
         self.gray           = None
 
     def face(self):
-
+        self.face_cascade = opencv.CascadeClassifier(self.face_instance._get_face_cascade())
 
