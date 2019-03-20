@@ -23,7 +23,7 @@ class Initialise_path:
 class Face_cascade:
 
     def __init__(self):
-        self.initialise   = Initialise_path._get_instance()
+        self.initialise   = None
         self.face_cascade = None
         self.eye_cascade  = None
 
@@ -44,4 +44,5 @@ class Face_cascade:
 class Image_Treat:
 
     def __init__(self):
-        self.image = None
+        self.initialise = Initialise_path()
+        self.image      = self.initialise._get_image()
