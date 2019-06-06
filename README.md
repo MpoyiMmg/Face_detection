@@ -1,4 +1,6 @@
 # Face_detection
 
-Realisation de la detection des faces avec import des photos et en mode direct(camera)
-avec python opencv
+la premiere version de ce code est de detecter la face sur une image
+avec opencv et python
+
+NB: ce code sera amelioré progressivement
