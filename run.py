@@ -10,3 +10,7 @@ gray_image = cv2.cvtColor(resize_image, cv2.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(gray_image, scaleFactor=1.05, minNeighbors=5)
 for x,y,w,h in faces:
     image = cv2.rectangle(resize_image, (x,y), (x+w, y+h), (0,255,0), 3)
+
+
+cv2.imshow("Detect",image)
+cv2.waitKey(0)
