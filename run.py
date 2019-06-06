@@ -6,7 +6,9 @@ def main():
     choice = int(input("tapez sur 0 pour continuer..."))
 
     if choice == 0 :
-        face_detect.detect_face()
+
+        image_path = input("entrez le chemin de l'image a ce format : /chemin/vers/le/fichier.jpg : ")
+        face_detect.detect_face(image_path)
     
     else :
         main()
