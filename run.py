@@ -3,7 +3,12 @@ import face_detect
 print('---DETECTION DES VISAGES--------')
 
 def main():
-    choice = int(input("tapez sur 0 pour continuer..."))
+
+    print("------ Face Detect ---------")
+    print("1. Detecter sur une photo")
+    print("2. Detecter a partir du webcam")
+    print("0. Quitter")
+    choice = int(input("tapez  pour continuer..."))
 
     if choice == 0 :
 
