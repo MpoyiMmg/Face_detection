@@ -31,14 +31,17 @@ def detect_by_video_capture():
 
     while True:
 
-        _,img = video.read() #lecture de chaque image renvoyé par la webcam 
+        _,img = video.read() #lecture de chaque image renvoyée par la webcam 
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+        # detection des points qui correspond a une face
         faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 
         for(x, y, w, h) in faces:
+            # place du rectangle vert sur la face detecter
             cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
 
+        #affichage du resultat
         cv2.imshow("vide capture", img)
         k =cv2.waitKey(30)
         if k == 27:
