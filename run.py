@@ -8,12 +8,13 @@ def main():
     print("1. Detecter sur une photo")
     print("2. Detecter a partir du webcam")
     print("0. Quitter")
+    
     choice = int(input("tapez  pour continuer..."))
 
     if choice == 0 :
 
         image_path = input("entrez le chemin de l'image a ce format : /chemin/vers/le/fichier.jpg : ")
-        face_detect.detect_face(image_path)
+        face_detect.detect_simple_image(image_path)
     
     else :
         main()
