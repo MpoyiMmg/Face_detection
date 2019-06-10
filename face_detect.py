@@ -19,16 +19,19 @@ def detect_simple_image(path):
     cv2.imshow("Detect",image)
     cv2.waitKey(0)
 
+
+# fonction qui permet de detecter la face a partir de la camera du pc
 def detect_by_video_capture():
 
     # chargement du fichier cascade
     face_cascade = cv2.CascadeClassifier("haarcascades/haarcascade_frontalface_default.xml")
 
-    video = cv2.VideoCapture(0)
+    # ouverture de la camera
+    video = cv2.VideoCapture(0) #0 est pour le webcam du pc; si c'etait une camera externe on mettra 1
 
     while True:
 
-        _,img = video.read()
+        _,img = video.read() #lecture de chaque image renvoyé par la webcam 
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
         faces = face_cascade.detectMultiScale(gray, 1.1, 4)
