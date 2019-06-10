@@ -1,6 +1,6 @@
 import cv2 
 
-def detect_face(path):
+def detect_simple_image(path):
 
     face_cascade = cv2.CascadeClassifier("haarcascades/haarcascade_frontalface_default.xml")
 
@@ -18,3 +18,21 @@ def detect_face(path):
     print(" sur cette image il'ya ",i," faces")
     cv2.imshow("Detect",image)
     cv2.waitKey(0)
+
+def detect_by_video_capture():
+
+    # chargement du fichier cascade
+    face_cascade = cv2.CascadeClassifier("haarcascades/haarcascade_frontalface_default.xml")
+
+    video = cv2.VideoCapture(0)
+
+    while True:
+
+        _,img = video.read()
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        # faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+
+        cv2.imshow("vide capture")
+        cv2.waitKey(0)
+    video.release()
