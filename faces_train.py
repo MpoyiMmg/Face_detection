@@ -10,6 +10,8 @@ image_dir = os.path.join(BASE_DIR, "images")
 face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
 
 current_id = 0
+labels_id = 0
+
 y_labels = []
 x_train  =  []
 
