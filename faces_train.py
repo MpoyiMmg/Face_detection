@@ -10,7 +10,7 @@ image_dir = os.path.join(BASE_DIR, "images")
 face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
 
 current_id = 0
-labels_id = 0
+labels_id = {}
 
 y_labels = []
 x_train  =  []
@@ -20,6 +20,13 @@ for root, dirs, files in os.walk(image_dir):
         if file.endswith("png") or file.endswith("jpg") or file.endswith("jpeg"):
             path = os.path.join(root, file)
             label = os.path.basename(os.path.dirname(path)).replace(" ", "-").lower()
+
+            if not label in labels_id:
+                labels_id[label] = current_id
+                current_id += 1
+
+            id_ = labels_id[label]
+            
             print(label," : ",path)
             y_labels.append(label)
             x_train.append(path) #verifie l'image et la transforme en tableau numpy
@@ -33,5 +40,6 @@ for root, dirs, files in os.walk(image_dir):
 
                 roi = image_array[y:y+h, x:x+w]
                 x_train.append(roi)
+                y_labels.append(id_)
 
             print(image_array)
