@@ -28,11 +28,11 @@ for root, dirs, files in os.walk(image_dir):
                 current_id += 1
 
             id_ = labels_id[label]
-            print(labels_id)
+            # print(labels_id)
             
-            print(label," : ",path)
-            y_labels.append(label)
-            x_train.append(path) #verifie l'image et la transforme en tableau numpy
+            # print(label," : ",path)
+            # y_labels.append(label)
+            # x_train.append(path) #verifie l'image et la transforme en tableau numpy
 
             pil_image = Image.open(path).convert("L") #grayscale
             image_array = np.array(pil_image, "uint8")
@@ -45,9 +45,13 @@ for root, dirs, files in os.walk(image_dir):
                 x_train.append(roi)
                 y_labels.append(id_)
 
-            print(image_array)
+            # print(y_labels)
+            # print(image_array)
 # print(y_labels)
 # print(x_train)
 
 with open("labels.pickle", 'wb') as f:
     pickle.dump(labels_id, f)
+
+recognizer.train(x_train, np.array(y_labels))
+recognizer.save("trainner.yml")
