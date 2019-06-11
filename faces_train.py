@@ -1,5 +1,6 @@
 import os
 import cv2
+import pickle
 import numpy as np
 from PIL import Image
 
@@ -26,6 +27,7 @@ for root, dirs, files in os.walk(image_dir):
                 current_id += 1
 
             id_ = labels_id[label]
+            print(labels_id)
             
             print(label," : ",path)
             y_labels.append(label)
@@ -43,3 +45,5 @@ for root, dirs, files in os.walk(image_dir):
                 y_labels.append(id_)
 
             print(image_array)
+# print(y_labels)
+# print(x_train)
