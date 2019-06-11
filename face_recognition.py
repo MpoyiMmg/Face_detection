@@ -48,8 +48,8 @@ while(boolean):
 
             cv2.putText(frame, name, (x, y), font, 1, color, stroke, cv2.LINE_AA)
 
-        img_item = "5.jpg"
-        cv2.imwrite(img_item, roi_gray)
+        # img_item = "5.jpg"
+        # cv2.imwrite(img_item, roi_gray)
 
         #cadrage de la face
         color = (255, 255, 255)
