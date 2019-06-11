@@ -4,6 +4,8 @@ import cv2
 cap = cv2.VideoCapture(0)
 boolean = True
 
+face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
+
 while(boolean):
 
     ret, frame = cap.read()
@@ -14,3 +16,4 @@ while(boolean):
         break
 
 cap.release()
+cv2.destroyAllWindows()
