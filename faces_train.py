@@ -47,3 +47,6 @@ for root, dirs, files in os.walk(image_dir):
             print(image_array)
 # print(y_labels)
 # print(x_train)
+
+with open("labels.pickle", 'wb') as f:
+    pickle.dump(labels_id, f)
