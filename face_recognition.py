@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import pickle
 
 # ouverture de la webcam
 cap = cv2.VideoCapture(0)
@@ -9,6 +10,12 @@ boolean = True
 face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt2.xml')
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read("trainner.yml")
+
+labels = {"person_name": 1}
+
+with open("labels.pickle", 'rb') as f:
+    og_labels = pickle.load(f)
+    labels = {v:k for k,v in og_labels.items()}
 
 while(boolean):
 
@@ -32,6 +39,7 @@ while(boolean):
 
         if conf >= 45 and conf <= 85:
             print(id_)
+            print(labels[id_])
 
         img_item = "ma_face.jpg"
         cv2.imwrite(img_item, roi_gray)
