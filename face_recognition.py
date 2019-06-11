@@ -41,7 +41,7 @@ while(boolean):
             print(id_)
             print(labels[id_])
 
-        img_item = "ma_face.jpg"
+        img_item = "5.jpg"
         cv2.imwrite(img_item, roi_gray)
 
         #cadrage de la face
