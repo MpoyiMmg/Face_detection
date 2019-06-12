@@ -5,7 +5,7 @@ import pickle
 def open_webcam():
     # ouverture de la webcam
     cap = cv2.VideoCapture(0)
-    return True
+    return True, cap
 
 
 def recognize():
@@ -19,6 +19,9 @@ def recognize():
     with open("labels.pickle", 'rb') as f:
         og_labels = pickle.load(f)
         labels = {v:k for k,v in og_labels.items()}
+
+    boolean, cap = open_webcam()
+    # print(boolean)
 
     while(boolean):
 
