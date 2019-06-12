@@ -24,7 +24,24 @@ def main():
 
     # troisieme choix est la Reconnaissance faciale a partir de la webcam
     elif choice == 3:
-        fr.recognize()
+        print("1. Utiliser la webcam")
+        print("2. Importer une video")
+        print("2. simple image")
+
+        ch = int(input("Faites le choix : "))
+
+        if ch == 1:
+            fr.recognize()
+
+        elif ch == 2:
+            print("...en cours de conception")
+
+        elif ch == 3:
+            print("...en cours de conception")
+
+        else : 
+            run()
+
 
     elif choice == 0:
         exit
