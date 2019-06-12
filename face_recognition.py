@@ -71,3 +71,8 @@ def recognize():
 
     cap.release()
     cv2.destroyAllWindows()
+
+def recognize_simple_image():
+    #prochaine etape
+
+    face_cascade = cv2.CascadeClassifier("haarcascades/haarcascade_frontalface_alt2.xml")
