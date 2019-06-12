@@ -40,7 +40,7 @@ def main():
             print("...en cours de conception")
 
         else : 
-            run()
+            main()
 
 
     elif choice == 0:
